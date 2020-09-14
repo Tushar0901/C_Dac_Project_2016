@@ -1,0 +1,69 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>New Page 1</title>
+<script language=javascript>
+
+function rate()
+{
+	if(f1.D1.value=="punjabi")
+	f1.T1.value="100"
+	
+	if(f1.D1.value=="gujrati")
+	f1.T1.value="150"
+	
+	if(f1.D1.value=="Chinese")
+	f1.T1.value="200"
+}
+
+function total()
+{
+		f1.T3.value=eval(f1.T1.value)*eval(f1.T2.value)
+}
+
+
+
+
+</script>
+
+
+
+
+
+
+</head>
+
+<body>
+
+<form method="POST" action="--WEBBOT-SELF--" name=f1>
+	<!--webbot bot="SaveResults" U-File="C:\Documents and Settings\Administrator\My Documents\My Web Sites\_private\form_results.csv" S-Format="TEXT/CSV" S-Label-Fields="TRUE" -->
+	<table border="1" width="100%">
+		<tr>
+			<td>Item name</td>
+			<td><select size="1" name="D1" onclick=rate()>
+			<option>select item</option>
+			<option value="punjabi">punjabi</option>
+			<option value="gujrati">gujrati</option>
+			<option value="Chinese">Chinese</option>
+			</select></td>
+			
+		</tr>
+		<tr>
+			<td>Rate</td>
+			<td><input type="text" name="T1" size="20"></td>
+		</tr>
+		<tr>
+			<td>Que</td>
+			<td><input type="text" name="T2" size="20"></td>
+		</tr>
+		<tr>
+			<td>Total</td>
+			<td><input type="text" name="T3" size="20" onclick=total()></td>
+		</tr>
+	</table>
+</form>
+
+</body>
+
+</html>

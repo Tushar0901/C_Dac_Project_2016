@@ -1,0 +1,132 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>New Page 1</title>
+<script language=javascript>
+
+var fname,lname,homeaddress,officeaddress,mobile,email;
+
+function checkValidation()
+{
+
+	fname=details.fname.value;
+	lname=details.lname.value;
+	homeaddress=details.homeaddress.value;
+	officeaddress=details.officeaddress.value;
+	mobile=details.mobile.value;
+	email=details.email.value;
+		if(fname=="")
+			{
+				alert("Please enter first name");
+				document.details.fname.focus();
+			}
+			
+		else if(lname=="")
+			{
+				alert("Please enter last name");
+				document.details.lname.focus();
+			}
+			
+		else if(homeaddress=="")
+			{
+				alert("Please enter home address");
+				document.details.homeaddress.focus();
+			}
+			
+			
+		else if(officeaddress=="")
+			{
+				alert("Please enter office address");
+				document.details.officeaddress.focus();
+			}
+			
+		else if(mobile=="")
+			{
+				alert("Please enter mobile number");
+				document.details.mobile.focus();
+			}
+			
+		else if(email=="")
+			{
+				alert("Please enter email address");
+				document.details.email.focus();
+			}
+			
+		else
+			{	validation();	}
+	}
+	
+function validation()
+	
+		{
+		data=document.details.email.value;
+		i=data.indexOf('@');
+		j=data.indexOf('.');
+		diff=parseInt(j)-parseInt(i);
+		k=parseInt(j)+1
+		c=data.charAt(k);
+		
+		if(i<1 || diff<=1 || c==")
+		{
+			alert("invalid email address");
+			document.details.email.focus();
+		}}}
+		
+		
+		
+		
+				
+			
+		
+			
+</script>
+
+
+
+
+</head>
+
+<body>
+
+<form method="POST" action="--WEBBOT-SELF--" name="details">
+	<!--webbot bot="SaveResults" U-File="C:\Documents and Settings\Administrator\My Documents\My Web Sites\_private\form_results.csv" S-Format="TEXT/CSV" S-Label-Fields="TRUE" -->
+	<table border="1" width="100%">
+		<tr>
+			<td width=28%>First Name</td>
+			<td width=72%><input type="text" name="fname" size="20"></td>
+		</tr>
+		<tr>
+			<td width=28%>Last Name</td>
+			<td width=72%><input type="text" name="lname" size="20"></td>
+		</tr>
+		<tr>
+			<td valign="top">Home Address</td>
+			<td width=72%><textarea rows="2" name="homeaddress" cols="40"></textarea></td>
+		</tr>
+		<tr>
+			<td valign="top">Office Address</td>
+			<td><textarea rows="2" name="officeaddress" cols="40"></textarea></td>
+		</tr>
+		<tr>
+			<td>Mobile</td>
+			<td><input type="text" name="mobile" size="20"></td>
+		</tr>
+		<tr>
+			<td>Email</td>
+			<td><input type="text" name="email" size="20"></td>
+		</tr>
+		<tr>
+			<td colspan="2"><div align="center">
+			<input type="button" name="submit" value="submit" onclick="checkValidation()">
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="reset" name="clear" value="Clear">	
+			</div>
+			</td>
+			</tr>
+	</table>
+</form>
+
+</body>
+
+</html>

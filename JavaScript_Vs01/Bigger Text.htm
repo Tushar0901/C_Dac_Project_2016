@@ -1,0 +1,41 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>C-DAC COMPUTER EDUCATION</title>
+<script language=javascript>
+
+textsize=1;
+maxsize=100;
+function writmsg()
+{
+	if(textsize<maxsize)
+	{
+	document.getElementById('msg').style.fontSize=textsize;
+	textsize++;
+	timer=setTimeout("writmsg()",10);
+	}
+}
+
+function stoptimer()
+	{
+	clearTimeout(1);
+	}
+
+
+</script>
+
+
+
+
+</head>
+
+<body onload="writmsg()" >
+<p id="msg">
+C-DAC COMPUTER EDUCATION
+</p>
+
+
+</body>
+
+</html>

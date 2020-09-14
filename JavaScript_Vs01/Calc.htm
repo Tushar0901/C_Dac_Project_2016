@@ -1,0 +1,65 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<title>First Value</title>
+<script language=javascript>
+
+function Add()
+{
+f1.T3.value=eval(f1.T1.value)+eval(f1.T2.value)
+}
+
+function Sub()
+{
+f1.T3.value=eval(f1.T1.value)-eval(f1.T2.value)
+}
+
+function Mul()
+{
+f1.T3.value=eval(f1.T1.value)*eval(f1.T2.value)
+}
+
+function Div()
+{
+f1.T3.value=eval(f1.T1.value)%eval(f1.T2.value)
+}
+
+
+
+
+</script>
+</head>
+
+<body>
+
+
+<form method="POST" action="--WEBBOT-SELF--" name=f1>
+	<!--webbot bot="SaveResults" U-File="C:\Documents and Settings\Administrator\My Documents\My Web Sites\_private\form_results.csv" S-Format="TEXT/CSV" S-Label-Fields="TRUE" -->
+	<table border="2" width="100%">
+		<tr>
+			<td>First Value</td>
+			<td><input type="text" name="T1" size="20"></td>
+		</tr>
+		<tr>
+			<td>Second Value</td>
+			<td><input type="text" name="T2" size="20"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="Add" name="B1" onclick=Add()>&nbsp;
+			<input type="button" value="Sub" name="B2" onclick=Sub()></td>
+			<td><input type="button" value="Mul" name="B3" onclick=Mul()>&nbsp;
+			<input type="button" value="Div" name="B4" onclick=Div()></td>
+		</tr>
+		<tr>
+			<td>Answer</td>
+			<td><input type="text" name="T3" size="20"></td>
+		</tr>
+	</table>
+</form>
+
+
+</body>
+
+</html>
