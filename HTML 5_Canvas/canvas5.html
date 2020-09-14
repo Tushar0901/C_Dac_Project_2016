@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<canvas id="mycanvs" width="200" height="200" style="border:1px solid #666
+">
+</canvas>
+
+<canvas id="mycanvs1" width="200" height="200" style="border:1px solid #666
+">
+</canvas>
+
+<canvas id="mycanvs2" width="200" height="200" style="border:1px solid #666
+">
+</canvas>
+
+<canvas id="mycanvs3" width="200" height="200" style="border:1px solid #666
+">
+</canvas>
+
+<canvas id="mycanvs4" width="200" height="200" style="border:1px solid #666
+">
+</canvas>
+
+<canvas id="mycanvs5" width="200" height="200" style="border:1px solid #666
+">
+</canvas>
+
+
+
+
+
+<script language="javascript">
+var c=document.getElementById("mycanvs");
+var ctx=c.getContext("2d");
+ctx.moveTo(0,0);
+ctx.lineTo(200,50);
+ctx.stroke();
+
+var c=document.getElementById("mycanvs1");
+var ctx=c.getContext("2d");
+ctx.beginPath();
+ctx.arc(95,40,20,250,10);
+ctx.stroke();
+
+var c=document.getElementById("mycanvs2");
+var ctx=c.getContext("2d");
+ctx.font="30px verdana";
+ctx.fillText("Hello World",10,50);
+
+var c=document.getElementById("mycanvs3");
+var ctx=c.getContext("2d");
+ctx.font="25px Arial";
+ctx.strokeText("hello world",10,30);
+
+var c=document.getElementById("mycanvs4");
+var ctx=c.getContext("2d");
+
+//Create Gradient
+var grd=ctx.createLinearGradient(0,0,200,0);
+grd.addColorStop(0,"red");
+grd.addColorStop(1,"black");
+
+//Fill With gradient
+ctx.fillStyle=grd;
+ctx.fillRect(10,10,150,80);
+
+var c=document.getElementById("mycanvs5");
+var ctx=c.getContext("2d");
+
+//create gradient
+var grd=ctx.createRadialGradient(75,50,5,90,60,100);
+grd.addColorStop(0,"red");
+grd.addColorStop(0.5,"black");
+grd.addColorStop(1,"white");
+
+
+//fill with gradient
+ctx.fillStyle=grd;
+ctx.fillRect(10,10,150,80);
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+</body>
+</html>

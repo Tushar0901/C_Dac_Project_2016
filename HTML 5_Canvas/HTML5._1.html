@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+
+<body>
+<canvas id="mycanvas" width="250" height="100" style="border:1px solid #666">
+</canvas>
+
+<canvas id="mycanvas1" width="250" height="100" style="border:1px solid #666">
+</canvas>
+
+<canvas id="mycanvas2" width="250" height="100" style="border:1px solid #666">
+</canvas>
+
+<canvas id="mycanvas3" width="250" height="100" style="border:1px solid #666">
+</canvas>
+
+<script language="javascript">
+var c=document.getElementById("mycanvas");
+var ctx=c.getContext("2d");
+ctx.moveTo(0,0);
+ctx.lineTo(150,50);
+ctx.stroke();
+
+var c=document.getElementById("mycanvas1");
+var ctx=c.getContext("2d");
+ctx.beginPath();
+ctx.arc(50,50,25,360,0);
+ctx.stroke();
+
+var c=document.getElementById("mycanvas2");
+var ctx=c.getContext("2d");
+ctx.font="30px Arial";
+ctx.fillText("Hello World",10,50);
+
+var c=document.getElementById("mycanvas3");
+var ctx=c.getContext("2d");
+ctx.font="30px Arial";
+ctx.stokeText("hello world",10,50);
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
